@@ -33,11 +33,25 @@ li {
 img {
   max-width: 100%;
 }
+button {
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
 .container {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
 }
+.section__title {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
@@ -49,8 +63,8 @@ body {
   border-bottom: 1px solid #cacad6;
 }
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 80px;
 }
@@ -58,8 +72,12 @@ body {
   display: flex;
   gap: 0 20px;
 }
+.logo {
+  justify-self: center;
+}
 .basket {
   position: relative;
+  justify-self: end;
 }
 .basket--on span {
   font-size: 11px;
@@ -87,6 +105,7 @@ body {
   padding-top: 1%;
   font-size: 96px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 .subtitle {
   font-size: 36px;
@@ -107,14 +126,50 @@ body {
   display: flex;
   padding: 0;
   text-transform: uppercase;
-  padding: 1px;
+  padding: 1px 0.9px;
 }
 .buy-btn__text {
   color: #f6f4f5;
   padding: 20px 110px;
+  text-transform: uppercase;
 }
 .buy-btn__price {
   background-color: #f6f4f5;
   padding: 21px 105px;
   color: #000;
+}
+.features {
+  padding: 100px 0;
+}
+.features__titles {
+  display: flex;
+}
+.features__title {
+  flex-basis: 300px;
+  padding-right: 20px;
+}
+.features__text {
+  min-width: 330px;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 2px;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.tabs__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.tabs__btn-item {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.tabs__btn-item--active {
+  color: #070707;
 }
